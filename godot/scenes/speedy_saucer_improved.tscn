@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbf087nreirer"]
+
+[ext_resource type="Texture2D" uid="uid://bhfseh3yqh348" path="res://assets/purple.png" id="1_ggatn"]
+[ext_resource type="PackedScene" uid="uid://cyr5lpn67mwlm" path="res://scenes/level.tscn" id="2_gfrfa"]
+[ext_resource type="PackedScene" uid="uid://bu2rp17336np1" path="res://scenes/Player.tscn" id="3_xpehc"]
+
+[node name="SpeedySaucerImproved" type="Node2D"]
+
+[node name="Graphics" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Graphics"]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="Graphics/CanvasLayer"]
+z_index = -100
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_ggatn")
+stretch_mode = 1
+
+[node name="Level1" parent="." instance=ExtResource("2_gfrfa")]
+z_index = -50
+position = Vector2(341, 258)
+
+[node name="Player" parent="." instance=ExtResource("3_xpehc")]
+position = Vector2(638, 361)
+scale = Vector2(0.8, 0.8)

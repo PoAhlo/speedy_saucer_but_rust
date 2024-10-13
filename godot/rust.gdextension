@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../rust/target/debug/libspeedy_saucer_improved.so"
+linux.release.x86_64 =   "res://../rust/target/release/libspeedy_saucer_improved.so"
+windows.debug.x86_64 =   "res://../rust/target/debug/speedy_saucer_improved.dll"
+windows.release.x86_64 = "res://../rust/target/release/speedy_saucer_improved.dll"
+macos.debug =            "res://../rust/target/debug/libspeedy_saucer_improved.dylib"
+macos.release =          "res://../rust/target/release/libspeedy_saucer_improved.dylib"
+macos.debug.arm64 =      "res://../rust/target/debug/libspeedy_saucer_improved.dylib"
+macos.release.arm64 =    "res://../rust/target/release/libspeedy_saucer_improved.dylib"
